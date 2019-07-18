@@ -47,15 +47,15 @@ A Knockout ViewModel looks very much like a basic class that is created in JavaS
 
 #### Q. What is two way data binding?
 
-Knockout uses the “data-*” tags to create a live dynamic link between a browser UI control, and a member or method inside a data ViewModel. If you have a data model with a field ‘FirstName’ and an edit box linked using the data-bind attribute to ‘FirstName’, then anytime the data model changes (for example programmatically), that change immediately shows in the edit box, and any time a user makes a change to the FirstName in the edit box, the underlying data in the field ‘FirstName’ is changed.
+Knockout uses the <code>data-*</code> tags to create a live dynamic link between a browser UI control, and a member or method inside a data ViewModel. If you have a data model with a field <code>FirstName</code> and an edit box linked using the data-bind attribute to <code>FirstName</code>, then anytime the data model changes (for example programmatically), that change immediately shows in the edit box, and any time a user makes a change to the FirstName in the edit box, the underlying data in the field <code>FirstName</code> is changed.
 
 #### Q. How do you call a Knockout method using data bind concept?
 
-Knockout allows us to use the data-bind concept to hook into user control object events such as ‘click’. To do this, we use a ‘data-bind’ with the method we want to call as the click parameter ‘data-bind=”click: callSomeMethod”’.
+Knockout allows us to use the data-bind concept to hook into user control object events such as <code>click</code>. To do this, we use a <code>data-bind</code> with the method we want to call as the click parameter <code>data-bind=click: callSomeMethod</code>.
 
 #### Q. What is a use of templates in Knockout and how are they coded ?
 
-Knockout allows us to use the data-bind concept to hook into user control object events such as ‘click’. To do this, Templates can provide different blocks of mark-up to be used for different view renderings. For example, to show mark-up with a required ‘State’ field for a US address, and a required ‘Town’ field for say a UK address. Mark-up for templates can be implemented using an external template view-engine, or by implementing the html inside a pseudo JavaScript block.
+Knockout allows us to use the data-bind concept to hook into user control object events such as <code>click</code>. To do this, Templates can provide different blocks of mark-up to be used for different view renderings. For example, to show mark-up with a required <code>State</code> field for a US address, and a required <code>Town</code> field for say a UK address. Mark-up for templates can be implemented using an external template view-engine, or by implementing the html inside a pseudo JavaScript block.
 
 #### Q. What types of data binding are available in knockout JS?
 
@@ -71,11 +71,11 @@ There are different types of data bindings and its looks like-
 
 #### Q. How do you search or sort an observable array ?
 
-You can search and sort using a ‘ko.Computed’ function. The computed function could implement an ‘arrayFilter’ call from the Knockout utils library to search, and a relevant compare (on string, number, date) for the sort. In all cases, the computed function filters out what it doesn’t want and returns data accordingly.
+You can search and sort using a <code>ko.Computed</code> function. The computed function could implement an <code>arrayFilter</code> call from the Knockout utils library to search, and a relevant compare (on string, number, date) for the sort. In all cases, the computed function filters out what it doesn’t want and returns data accordingly.
 
 #### Q. How do you prepare a Knockout object for data transfer ?
 
-Data can be serialised to JSON using ko.toJSON(viewModel), and to a simple JavaScript object using ko.toJS(viewModel).
+Data can be serialised to JSON using <code>ko.toJSON(viewModel)</code>, and to a simple JavaScript object using ko.toJS(viewModel).
 
 #### Q. What is the purpose of the mapping plugin ?
 
@@ -83,12 +83,12 @@ When loading data into a viewModel, if it is complex with nested arrays, it can 
 
 #### Q. What is a binding, what are the binding types, and what are they used for?
 
-A binding is a html mark-up attribute that is added to an html element to create a link between the html control element and a knockout object. It takes the format ‘data-bind:<binding-type:value>’. There are binding types to assist with objects like control text, visibility and CSS styles, and other types to assist with form fields such as value, submit, event, etc. Bindings might be used to display the title label of a page, the visibility of a checkbox, and control the data entry in form field.
+A binding is a html mark-up attribute that is added to an html element to create a link between the html control element and a knockout object. It takes the format <code>data-bind:<binding-type:value></code>. There are binding types to assist with objects like control text, visibility and CSS styles, and other types to assist with form fields such as value, submit, event, etc. Bindings might be used to display the title label of a page, the visibility of a checkbox, and control the data entry in form field.
 
 #### Q. How To Creating Custom bindings in knockoutJs?
 
 When we create custom binding, we need to add a property with your custom binding name and assign an object with two callback functions.
-Registering your binding – To register a binding, adds it as a sub property of “ko.bindingHandlers” and its looks like.
+Registering your binding – To register a binding, adds it as a sub property of <code>ko.bindingHandlers</code> and its looks like.
 
 ```
 ko.bindingHandlers.myCustomBinding = {
@@ -115,11 +115,11 @@ DOM elements –
 
 #### Q. How can you control flow with bindings ?
 
-When you have an array of items in a Knockout viewModel, you can tell your mark-up to iterate through them using the data-bind ‘for-each’ for example.
+When you have an array of items in a Knockout viewModel, you can tell your mark-up to iterate through them using the data-bind <code>for-each</code> for example.
 
 #### Q. Give a benefit of using Knockout form binding
 
-Normal functionality we might implement around form fields such as getting/setting the field value, hooking events, etc. can be carried out using ‘form data-bind’. A benefit of doing this is that we allow control of the form to be tied to the data model and its rules.
+Normal functionality we might implement around form fields such as getting/setting the field value, hooking events, etc. can be carried out using <code>form data-bind</code>. A benefit of doing this is that we allow control of the form to be tied to the data model and its rules.
 
 #### Q. How do you delete an item from a Knockout array ?
 
@@ -127,7 +127,7 @@ Use the remove or removeAll methods, passing in the item you want to match for d
 
 #### Q. How would you flag an item deleted and why is this useful ?
 
-In cases where you want to manage an array of existing data for example browser-side, and inform the server of both additions, changes and deletions, you can flag an array item using the ‘destroy’ or ‘destroyAll’ method. This creates a dirty record that is flagged “_destroy” and can be easily identified server-side for handling in the data repository.
+In cases where you want to manage an array of existing data for example browser-side, and inform the server of both additions, changes and deletions, you can flag an array item using the <code>destroy</code> or <code>destroyAll</code> method. This creates a dirty record that is flagged <code>_destroy</code> and can be easily identified server-side for handling in the data repository.
 
 #### Q. Name two context properties in Knockout and explain their use
 
