@@ -17,13 +17,13 @@ KnockoutJS is a JavaScript library that helps developers create modern, rich use
 
 #### Q. What Are the main features of KnockoutJs?
 
-**Dependency Tracking** – KnockoutJs make dependency between View and ViewModel. Its track the any changes on dependent objects and it is automatically updating the UI (DOM) when your data models are change.
-**Declarative Binding** – The Declarative Binding provides the ways, your UI (DOM) is connected with your data models in a simply manner using control.
-**Template Binding** – The Template bindings are used for build sophisticated UI in easily. It’s populate the DOM elements in the nested and repeating manner with the help of for-each, if, with, and other control flow bindings and third party template engine.
-**Automatic UI (DOM) Refresh** – The KnockoutJs automatically refresh the UI (DOM) you’re your ViewModel update. If any changes occurred in the ViewModel data automatically refresh on view/UI/DOM.
-**Pure JavaScript library** – The KnockoutJs works with any client-side or server technology and it is easily works with existing web application without any major changes.
-**Compact Size** – The KnockoutJs size is around 13kb. It is too small and convenient to use.
-**Support All Modern Browsers** – The KnockoutJs support most of the modern browsers like -IE 6+, Firefox 2+, Chrome, Safari, others.
+1. **Dependency Tracking** – KnockoutJs make dependency between View and ViewModel. Its track the any changes on dependent objects and it is automatically updating the UI (DOM) when your data models are change.
+1. **Declarative Binding** – The Declarative Binding provides the ways, your UI (DOM) is connected with your data models in a simply manner using control.
+1. **Template Binding** – The Template bindings are used for build sophisticated UI in easily. It’s populate the DOM elements in the nested and repeating manner with the help of for-each, if, with, and other control flow bindings and third party template engine.
+1. **Automatic UI (DOM) Refresh** – The KnockoutJs automatically refresh the UI (DOM) you’re your ViewModel update. If any changes occurred in the ViewModel data automatically refresh on view/UI/DOM.
+1. **Pure JavaScript library** – The KnockoutJs works with any client-side or server technology and it is easily works with existing web application without any major changes.
+1. **Compact Size** – The KnockoutJs size is around 13kb. It is too small and convenient to use.
+1. **Support All Modern Browsers** – The KnockoutJs support most of the modern browsers like -IE 6+, Firefox 2+, Chrome, Safari, others.
 
 #### Q. Why is KnockoutJS useful?
 
