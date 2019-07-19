@@ -1,0 +1,23 @@
+{
+  "name": "knockout-tutorials",
+  "version": "1.0.0",
+  "description": "Knockout Tutorials",
+  "main": "index.js",
+  "dependencies": {
+    "knockout": "^3.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pradeepvwa/KnockoutJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pradeepvwa/KnockoutJS/issues"
+  },
+  "homepage": "https://github.com/pradeepvwa/KnockoutJS#readme"
+}
