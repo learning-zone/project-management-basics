@@ -9,12 +9,12 @@ There are many different types of estimation techniques used in project manageme
 * How much time it will require to complete the project (Schedule)
 * Who will be doing the project (resources)
 * What is the budget required to deliver the project (cost)
-* Any intermediary dependencies that may delay or impact the project (Risks).
+* Any intermediary dependencies that may delay or impact the project (Risks)
 
 There are 3 major parts to project estimation mainly:-
 
-* Effort estimation,
-* Cost estimation, and
+* Effort estimation
+* Cost estimation
 * Resource estimate
 
 While accurate estimates are the basis of sound project planning, there are many techniques used as project management best practices in estimation as - **Analogous estimation**, **Parametric estimation**, **Delphi method**, **3 Point Estimate**, **Expert Judgment**, **Published Data Estimates**, **Vendor Bid Analysis**, **Reserve Analysis**, **Bottom-Up Analysis**, and **Simulation**. Usually, during the early stages of a project life cycle, the project requirements are feebly known and less information is available to estimate the project. The initial estimate is drawn merely by assumptions knowing the scope at a high level, this is known as ‘Ball-park estimates’, a term very often used by project managers.
