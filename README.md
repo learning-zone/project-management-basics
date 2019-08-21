@@ -44,3 +44,5 @@ This technique uses assumptions based on varying factors like scope, time, cost,
 * Identify the dependencies to complete each activity
 * Identify the possible risks and assumptions
 * Define the resource and cost estimate to the completion of each activity, component and work package
+
+#### Q. What is planning poker estimation technique?
