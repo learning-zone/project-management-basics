@@ -46,6 +46,7 @@ This technique uses assumptions based on varying factors like scope, time, cost,
 * Define the resource and cost estimate to the completion of each activity, component and work package
 
 #### Q. What is planning poker estimation technique?
+
 Planning poker, also called Scrum poker, is a consensus-based, gamified technique for estimating, mostly used to estimate effort or relative size of development goals in software development. Planning Poker is an agile estimating and planning technique that is consensus based. To start a poker planning session, the product owner or customer reads an agile user story or describes a feature to the estimators. 
 
 Each estimator is holding a deck of Planning Poker cards with values like 0, 1, 2, 3, 5, 8, 13, 20, 40 and 100, which is the sequence we recommend. The values represent the number of story points, ideal days, or other units in which the team estimates.
