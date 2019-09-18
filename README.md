@@ -47,3 +47,21 @@ This technique uses assumptions based on varying factors like scope, time, cost,
 
 #### Q. What is planning poker estimation technique?
 *TODO*
+
+#### Q. what is Ballpark Figures estimate?
+
+A ballpark figure is a rough numerical estimate or approximation of the value of something that is otherwise unknown. Ballpark figures are commonly used by accountants, salespersons, and other professionals to estimate current or future results. A stockbroker could use a ballpark figure to estimate how much money a client might have at some point in the future, given a certain rate of growth. A salesperson could use a ballpark figure to estimate how long a product a customer was thinking about buying might be viable.
+
+A ballpark figure is essentially a placeholder established for purposes of speculating what the amount or total of something might amount to so that the parties involved can move forward in whatever negotiation or planning is underway. As a concept, it has applications in business estimates, as well as in everyday life, depending on the circumstances.
+
+Ballpark figures are estimates used to move a discussion or deal forward when the exact measurement of the size or amount of something cannot yet be determined.
+
+Ballpark figures can be used for day-to-day purposes, such as estimating how much food and beverages might be needed for a barbecue or how many months it will likely take to pay off a new purchase.
+
+Ballpark figures are also used everywhere in the business world, such as estimating how much it might cost to expand into a certain market, or how many years it might take for a company to be profitable or for sales to justify a large purchase. It can also be used to estimate public adoption of a concept, technology, or product, as in how many people are likely to buy a certain phone and how long it might take them to upgrade that phone, once purchased.
+
+* **KEY TAKEAWAYS**
+
+* A ballpark figure is an estimate of what something might amount to numerically when a more accurate number is assessed, such as the cost of a product.
+* Ballpark figures can be helpful in establishing a placeholder, for purposes of conversation or estimation, when a more precise number is not available.
+* Ballpark figures are used in daily life and in many aspects of business; however, it is important to remember it is just an estimate, not an accurate read of something.
