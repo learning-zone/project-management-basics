@@ -67,7 +67,7 @@ Planning poker combines three methods of estimation −
 
 * **Disaggregation** − Disaggregation estimation is done by splitting a user story into smaller, easier-to-estimate user stories. The user stories to be included in a sprint are normally in the range of two to five days to develop. Hence, the user stories that possibly take longer duration need to be split into smaller use-Cases. This approach also ensures that there would be many stories that are comparable.
 
-#### Q. what is Ballpark Figures estimate?
+#### Q. What is Ballpark Figures estimate?
 
 A ballpark figure is a rough numerical estimate or approximation of the value of something that is otherwise unknown. Ballpark figures are commonly used by accountants, salespersons, and other professionals to estimate current or future results. A stockbroker could use a ballpark figure to estimate how much money a client might have at some point in the future, given a certain rate of growth. A salesperson could use a ballpark figure to estimate how long a product a customer was thinking about buying might be viable.
 
