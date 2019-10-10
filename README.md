@@ -79,7 +79,7 @@ Ballpark figures can be used for day-to-day purposes, such as estimating how muc
 
 Ballpark figures are also used everywhere in the business world, such as estimating how much it might cost to expand into a certain market, or how many years it might take for a company to be profitable or for sales to justify a large purchase. It can also be used to estimate public adoption of a concept, technology, or product, as in how many people are likely to buy a certain phone and how long it might take them to upgrade that phone, once purchased.
 
-* **KEY TAKEAWAYS**
+**KEY TAKEAWAYS**  
 
 * A ballpark figure is an estimate of what something might amount to numerically when a more accurate number is assessed, such as the cost of a product.
 * Ballpark figures can be helpful in establishing a placeholder, for purposes of conversation or estimation, when a more precise number is not available.
