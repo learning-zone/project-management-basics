@@ -71,9 +71,10 @@
 | 64. |grunt css 					   | Convert ".less" file into corresponding ".css" files |
 | 65. |npm install grunt-autoprefixer --save-dev|	 Add code for browser dependencies in css |
 | 66. |npm install grunt-browserify --save-dev  | Create bundle.js combining all files together |
-| 67. |npm install grunt-contrib-watch --save-dev|
-| 68. |grunt watch                               |
-| 69. |ng add @angular/material                  |
+| 67. |npm install grunt-contrib-watch --save-dev|                                              |
+| 68. |grunt watch                               |                                              |
+| 69. |ng add @angular/material                  |                                              |
+| 70. |npm install -g live-server                |                                              | 
 
   
 
@@ -164,12 +165,13 @@
 
 |Sl.No.| Commands                     | Description                       |
 |------|------------------------------|-----------------------------------|
-|  01.    |git clone --bare https://github.com/planetoftheweb/learnangular.git .git |         |
-|  02.    |git config --bool core.bare false| To change bare repository to normal repository |
-|  03.    |git reset --hard 	           |                    |
-|  04.    |git branch                     |                    |
-|  05.    |git checkout `branch_name`     | Switch to branch   |	
-|  06.    |git stash   				   | Save local changes |
+|  01. |git clone --bare https://github.com/planetoftheweb/learnangular.git .git |         |
+|  02. |git config --bool core.bare false| To change bare repository to normal repository |
+|  03. |git reset --hard 	           |                    |
+|  04. |git branch                     |                    |
+|  05. |git checkout `branch_name`     | Switch to branch   |	
+|  06. |git stash   				   | Save local changes |
+|  07. |git init                       |                    |
 		
 
 ### TypeScript COMMANDS
