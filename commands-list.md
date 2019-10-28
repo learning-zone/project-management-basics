@@ -1,4 +1,4 @@
-## JavaScript COMMANDS
+## COMMANDS LIST
 
 
 ### NODEJS COMMANDS
@@ -156,3 +156,18 @@
 |  12.  |npm install sass-loader node-sass --save-dev      | running sass using webpack |
 |  13.  |npm install url-loader file-loader --save-dev	  | Load images using webpack |
 |  14.  |npm install webpack-dev-server --save-dev		  | Load project in server using webpack |
+
+
+
+### GIT COMMANDS
+
+
+|Sl.No.| Commands                     | Description                       |
+|------|------------------------------|-----------------------------------|
+|  01.    |git clone --bare https://github.com/planetoftheweb/learnangular.git .git |         |
+|  02.    |git config --bool core.bare false| To change bare repository to normal repository |
+|  03.    |git reset --hard 	           |                    |
+|  04.    |git branch                     |                    |
+|  05.    |git checkout `branch_name`     | Switch to branch   |	
+|  06.    |git stash   				   | Save local changes |
+		
