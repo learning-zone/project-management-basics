@@ -1,7 +1,7 @@
 ## COMMANDS LIST
 
 
-#### NODEJS COMMANDS
+#### NODEJS Commands
 
 |Sl.No.| Commands                   | Description                   |
 |------|----------------------------|-------------------------------|
@@ -78,7 +78,7 @@
 
   
 
-#### Angular COMMANDS
+#### Angular Commands
 
 
 
@@ -114,7 +114,7 @@
 | 28. |npm install --save hammerjs   |                                 |
 
 
-#### Angular Generate COMMANDS
+#### Angular Generate Commands
 
 
 
@@ -138,7 +138,7 @@
 |  16. |ng generate component [ component-name ] --inline-template --inline-style --module app [ Generate initial test file ]|
 
 
-#### WEBPACK COMMANDS
+#### WEBPACK Commands
 
 
 |Sl.No.| Commands                     | Description                       |
@@ -160,7 +160,7 @@
 
 
 
-#### GIT COMMANDS
+#### GIT Commands
 
 
 |Sl.No.| Commands                     | Description                       |
@@ -174,7 +174,7 @@
 |  07. |git init                       |                    |
 		
 
-#### TypeScript COMMANDS
+#### TypeScript Commands
 
 |Sl.No.| Commands                     | Description                       |
 |------|------------------------------|-----------------------------------|
@@ -190,7 +190,7 @@
 |  10. |npm install systemjs            |                                     |          
 
 
-### DOS COMMANDS
+### DOS Commands
 
 
 |Sl.No.| Commands                     | Description                       |
@@ -203,7 +203,7 @@
 | 06.  |netsh wlan set hostednetwork mode=allow ssaid=Hostpot key=12345 | Create wifi hotspot |
 
 
-### UNIX COMMANDS
+### UNIX Commands
 
 |Sl.No.| Commands       | Description                       |
 |------|----------------|-----------------------------------|
