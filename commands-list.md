@@ -171,3 +171,19 @@
 |  05.    |git checkout `branch_name`     | Switch to branch   |	
 |  06.    |git stash   				   | Save local changes |
 		
+
+### TypeScript COMMANDS
+
+|Sl.No.| Commands                     | Description                       |
+|------|------------------------------|-----------------------------------|
+|  01. |npm install -g typescript     |                                   |
+|  02. |npm install -g typescript-compiler|                               |
+|  03. |tsc -v     			   		    | TypeScript Version              |
+|  04. |tsc ./app.ts             		| Compile                         |
+|  05. |tsc init 						| Initializes a typescript project and creates a tsconfig.json file |
+|  06. |tsc -w 						    | Watch input files               | 
+|  07. |tsc -d						    | Generates corresponding '.d.ts' file | 
+|  08. |tsc --out              		    | Concatenate and emit output to single file |
+|  09. |tsc --sourceMap        	        | Generates corresponding '.map' file |
+|  10. |npm install systemjs            |                                     |          
+
