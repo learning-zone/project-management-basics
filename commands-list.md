@@ -1,10 +1,10 @@
 ## COMMANDS LIST
 
 
-### NODEJS COMMANDS
+#### NODEJS COMMANDS
 
-|Sl.No.| Commands                   | Description                       |
-|------|----------------------------|-----------------------------------|
+|Sl.No.| Commands                   | Description                   |
+|------|----------------------------|-------------------------------|
 | 01. |npm install node@8.10.0      | Install node specific version |
 | 02. |npm init 					| Creates package.json |
 | 03. |npm install                  |                      |
@@ -78,7 +78,7 @@
 
   
 
-### Angular COMMANDS
+#### Angular COMMANDS
 
 
 
@@ -114,7 +114,7 @@
 | 28. |npm install --save hammerjs   |                                 |
 
 
-### Angular Generate COMMANDS
+#### Angular Generate COMMANDS
 
 
 
@@ -138,7 +138,7 @@
 |  16. |ng generate component [ component-name ] --inline-template --inline-style --module app [ Generate initial test file ]|
 
 
-### WEBPACK COMMANDS
+#### WEBPACK COMMANDS
 
 
 |Sl.No.| Commands                     | Description                       |
@@ -160,7 +160,7 @@
 
 
 
-### GIT COMMANDS
+#### GIT COMMANDS
 
 
 |Sl.No.| Commands                     | Description                       |
@@ -174,7 +174,7 @@
 |  07. |git init                       |                    |
 		
 
-### TypeScript COMMANDS
+#### TypeScript COMMANDS
 
 |Sl.No.| Commands                     | Description                       |
 |------|------------------------------|-----------------------------------|
