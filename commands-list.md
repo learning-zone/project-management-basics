@@ -229,7 +229,7 @@
 | 22.  |moveFromLocal	|                                   |
 | 23.  |moveToLocal		|                                   |
 | 24.  |mv				|                                   |
-| 25.  |nohup			| Nohup is very helpful when you have to execute a shell|script or command that take a long time to finish. Nohup stands for no hang up. |
+| 25.  |nohup			| Nohup is very helpful when you have to execute a shell script or command that take a long time to finish. Nohup stands for no hang up. |
 | 26.  |put				|                                    |
 | 27.  |renameSnapshot	|                                    |
 | 28.  |rm				|                                    |
