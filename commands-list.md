@@ -199,6 +199,7 @@
 | 02.  |taskkill /F /PID 5704         | Freeup the port number            |
 | 03.  |nslookup                      |                                   |
 | 04.  |for /F %a in ('dir /L /B') do rename %a %a | Rename current directory to lowercase |
+| 05.  |del *.tmp/s                   |Clear temporary files |
 
 
 ### UNIX COMMANDS
