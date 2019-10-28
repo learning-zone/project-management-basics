@@ -189,3 +189,13 @@
 |  09. |tsc --sourceMap        	        | Generates corresponding '.map' file |
 |  10. |npm install systemjs            |                                     |          
 
+
+### DOS COMMANDS
+
+
+|Sl.No.| Commands                     | Description                       |
+|------|------------------------------|-----------------------------------|
+| 01.  |netstat -a -o -n              | Check the avilale port            |
+| 02.  |taskkill /F /PID 5704         | Freeup the port number            |
+| 03.  |nslookup                      |                                   |
+| 04.  |for /F %a in ('dir /L /B') do rename %a %a | Rename current directory to lowercase |
