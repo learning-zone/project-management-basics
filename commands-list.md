@@ -200,6 +200,7 @@
 | 03.  |nslookup                      |                                   |
 | 04.  |for /F %a in ('dir /L /B') do rename %a %a | Rename current directory to lowercase |
 | 05.  |del *.tmp/s                   |Clear temporary files |
+| 06.  |netsh wlan set hostednetwork mode=allow ssaid=Hostpot key=12345 | Create wifi hotspot |
 
 
 ### UNIX COMMANDS
