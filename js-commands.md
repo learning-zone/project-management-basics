@@ -135,3 +135,24 @@
 |  14. |ng generate appShell [ appShell-name ]|
 |  15. |ng generate library [ library-name ]|
 |  16. |ng generate component [ component-name ] --inline-template --inline-style --module app [ Generate initial test file ]|
+
+
+### WEBPACK COMMANDS
+
+
+|Sl.No.| Commands                     | Description                       |
+|------|------------------------------|-----------------------------------|
+|  0.  |npm init                      |                                   |
+|  0.  |npm install -g webpack        |                                   |
+|  0.  |npm install webpack --save-dev|                                   |
+|  0.  |npm install jquery --save-dev |                                   |
+|  0.  |npm install                   |                                   |
+|  0.  |webpack main.js ./bundle.js   | Entry_point  compiled file_name   |
+|  0.  |webpack                       |                                   |
+|  0.  |webpack -w                    | watch                             |
+|  0.  |npm install babel-loader babel-core --save-dev|                   |
+|  0.  |npm install babel-preset-es2015 babel-preset-react --save-dev     |
+|  0.  |npm install style-loader css-loader --save-dev    | Load css using webpack |
+|  0.  |npm install sass-loader node-sass --save-dev      | running sass using webpack |
+|  0.  |npm install url-loader file-loader --save-dev	  | Load images using webpack |
+|  0.  |npm install webpack-dev-server --save-dev		  | Load project in server using webpack |
