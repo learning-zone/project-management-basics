@@ -1,6 +1,7 @@
-## NODEJS COMMANDS
+## JavaScript COMMANDS
 
 
+### NODEJS COMMANDS
 
 |Sl.No.| Commands                   | Description                       |
 |------|----------------------------|-----------------------------------|
@@ -76,7 +77,7 @@
 
   
 
-## Angular COMMANDS
+### Angular COMMANDS
 
 
 
@@ -112,25 +113,25 @@
 | 28. |npm install --save hammerjs   |                                 |
 
 
-## Angular Generate COMMANDS
+### Angular Generate COMMANDS
 
 
 
 |Sl.No.| Commands                               | 
 |------|----------------------------------------|
-|      |ng new [ app-name ] --routing           |
-|      |ng generate component [ component-name ]|
-|      |ng generate module [ module-name ]      |
-|      |ng generate class [ class-name ]        |
-|      |ng generate directive [ directive-name ]|
-|      |ng generate interface [ interface-name ]|
-|      |ng generate pipe [ pipe-name ]|
-|      |ng generate serviceWorker [ serviceWorker-name ]|
-|      |ng generate application [ application-name ]|
-|      |ng generate enum [ enum-name ]|
-|      |ng generate guard [ guard-name ]|
-|      |ng generate service [ service-name ]|
-|      |ng generate universal [ universal-name ]|
-|      |ng generate appShell [ appShell-name ]|
-|      |ng generate library [ library-name ]|
-|      |ng generate component [ component-name ] --inline-template --inline-style --module app [ Generate initial test file ]|
+|  01. |ng new [ app-name ] --routing           |
+|  02. |ng generate component [ component-name ]|
+|  03. |ng generate module [ module-name ]      |
+|  04. |ng generate class [ class-name ]        |
+|  05. |ng generate directive [ directive-name ]|
+|  06. |ng generate interface [ interface-name ]|
+|  07. |ng generate pipe [ pipe-name ]|
+|  08. |ng generate serviceWorker [ serviceWorker-name ]|
+|  09. |ng generate application [ application-name ]|
+|  10. |ng generate enum [ enum-name ]|
+|  11. |ng generate guard [ guard-name ]|
+|  12. |ng generate service [ service-name ]|
+|  13. |ng generate universal [ universal-name ]|
+|  14. |ng generate appShell [ appShell-name ]|
+|  15. |ng generate library [ library-name ]|
+|  16. |ng generate component [ component-name ] --inline-template --inline-style --module app [ Generate initial test file ]|
