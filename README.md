@@ -1,5 +1,11 @@
 ## General Questions and Answers
 
+### Table of Contents
+
+* [Important Commands List](commands-list.md)
+
+
+
 #### Q. What are the scientific ways to do project estimation?
 
 There are many different types of estimation techniques used in project management with various streams like Engineering, IT, Construction, Agriculture, Accounting, etc. A Project manager is often challenged to align mainly six project constraints - **Scope**, **Time**, **Cost**, **Quality**, **Resources** and **Risk** in order to accurately estimate the project. The common questions that come into the mind of a project manager at the start of the project are –
