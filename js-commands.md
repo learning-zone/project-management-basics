@@ -1,7 +1,7 @@
 ## NODEJS Commands
 
 
-|Sl.No.| Commands                   | Description
+|Sl.No.| Commands                   | Description                       |
 |-----|----------------------------------------------------------------|
 | 01. |npm install node@8.10.0      | Install node specific version |
 | 02. |npm init 					| Creates package.json |
