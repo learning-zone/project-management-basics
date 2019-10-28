@@ -75,7 +75,7 @@
 | 69. |ng add @angular/material                  |
 
   
-  
+
 ## Angular COMMANDS
 
 
@@ -110,3 +110,27 @@
 | 26. |ng add @angular/cdk           |                                 |
 | 27. |ng add @angular/animations    |                                 |
 | 28. |npm install --save hammerjs   |                                 |
+
+
+## Angular Generate COMMANDS
+
+
+
+|Sl.No.| Commands                               | 
+|------|----------------------------------------|
+|      |ng new [ app-name ] --routing           |
+|      |ng generate component [ component-name ]|
+|      |ng generate module [ module-name ]      |
+|      |ng generate class [ class-name ]        |
+|      |ng generate directive [ directive-name ]|
+|      |ng generate interface [ interface-name ]|
+|      |ng generate pipe [ pipe-name ]|
+|      |ng generate serviceWorker [ serviceWorker-name ]|
+|      |ng generate application [ application-name ]|
+|      |ng generate enum [ enum-name ]|
+|      |ng generate guard [ guard-name ]|
+|      |ng generate service [ service-name ]|
+|      |ng generate universal [ universal-name ]|
+|      |ng generate appShell [ appShell-name ]|
+|      |ng generate library [ library-name ]|
+|      |ng generate component [ component-name ] --inline-template --inline-style --module app [ Generate initial test file ]|
