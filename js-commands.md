@@ -142,17 +142,17 @@
 
 |Sl.No.| Commands                     | Description                       |
 |------|------------------------------|-----------------------------------|
-|  0.  |npm init                      |                                   |
-|  0.  |npm install -g webpack        |                                   |
-|  0.  |npm install webpack --save-dev|                                   |
-|  0.  |npm install jquery --save-dev |                                   |
-|  0.  |npm install                   |                                   |
-|  0.  |webpack main.js ./bundle.js   | Entry_point  compiled file_name   |
-|  0.  |webpack                       |                                   |
-|  0.  |webpack -w                    | watch                             |
-|  0.  |npm install babel-loader babel-core --save-dev|                   |
-|  0.  |npm install babel-preset-es2015 babel-preset-react --save-dev     |
-|  0.  |npm install style-loader css-loader --save-dev    | Load css using webpack |
-|  0.  |npm install sass-loader node-sass --save-dev      | running sass using webpack |
-|  0.  |npm install url-loader file-loader --save-dev	  | Load images using webpack |
-|  0.  |npm install webpack-dev-server --save-dev		  | Load project in server using webpack |
+|  01.  |npm init                      |                                   |
+|  02.  |npm install -g webpack        |                                   |
+|  03.  |npm install webpack --save-dev|                                   |
+|  04.  |npm install jquery --save-dev |                                   |
+|  05.  |npm install                   |                                   |
+|  06.  |webpack main.js ./bundle.js   | Entry_point  compiled file_name   |
+|  07.  |webpack                       |                                   |
+|  08.  |webpack -w                    | watch                             |
+|  09.  |npm install babel-loader babel-core --save-dev|                   |
+|  10.  |npm install babel-preset-es2015 babel-preset-react --save-dev     |
+|  11.  |npm install style-loader css-loader --save-dev    | Load css using webpack |
+|  12.  |npm install sass-loader node-sass --save-dev      | running sass using webpack |
+|  13.  |npm install url-loader file-loader --save-dev	  | Load images using webpack |
+|  14.  |npm install webpack-dev-server --save-dev		  | Load project in server using webpack |
