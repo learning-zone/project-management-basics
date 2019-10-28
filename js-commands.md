@@ -1,4 +1,5 @@
-## NODEJS Commands
+## NODEJS COMMANDS
+
 
 
 |Sl.No.| Commands                   | Description                       |
@@ -72,3 +73,39 @@
 | 67. |npm install grunt-contrib-watch --save-dev|
 | 68. |grunt watch                               |
 | 69. |ng add @angular/material                  |
+
+
+## Angular COMMANDS
+
+
+
+|Sl.No.| Commands               | Description                       |
+|------|------------------------|-----------------------------------|
+| 01. |npm install -g @angular/cli |                                   |
+| 02. |ng new project-name		    | Create an Angular project with Angular CLI |
+| 03. |ng serve --open              |                                            |
+| 04. |ng test						| Running unit tests |
+| 05. |ng e2e 						| Running end-to-end tests with protractor framwork|
+| 06. |ng generate					| Generate Angular components |
+| 07. |ng lint						| prints out linting errors |
+| 08. |ng build				        | The build artifacts will be stored in the dist/ directory. |
+| 09. |ng build --prod				| This will build the project in the dist directory |
+| 10. |ng build --dev				|                                                   |
+| 11. |ng get/ng set			    | Set a value in the Angular CLI configuration |
+| 12. |ng doc						| Opens a browser window with the keyword as search in Angular documentation. |
+| 13. |ng eject					| ejects your app and output the proper webpack configuration and scripts |
+| 14. |ng xi18n					| Extracts i18n messages from the templates. |
+| 15. |ng test --watch=false --code-coverage		| Generate Code Coverage Reports |
+| 16. |npm install firebase angularfire2 --save     |                  |
+| 17. |npm install @angular/platform-browser-dynamic| bootstrap module |
+| 18. |npm install angular-in-memory-web-api --save | Install In-memory-web-api |
+| 19. |npm install @angular/elements | Angular elements                |
+| 20. |npm install -g now			  | Opensource server               | 
+| 21. |npm install -g tsun			  | REPL - TypeScript Upgraded Node |
+| 22. |npm install moment --save-dev |                                 |
+| 23. |npm run                       |                                 |
+| 24. |npm run-script                |                                 |
+| 25. |ng add @angular/material      |                                 |
+| 26. |ng add @angular/cdk           |                                 |
+| 27. |ng add @angular/animations    |                                 |
+| 28. |npm install --save hammerjs   |                                 |
