@@ -81,7 +81,6 @@
 #### Angular Commands
 
 
-
 |Sl.No.| Commands               | Description                       |
 |------|------------------------|-----------------------------------|
 | 01. |npm install -g @angular/cli |                                   |
@@ -115,8 +114,6 @@
 
 
 #### Angular Generate Commands
-
-
 
 |Sl.No.| Commands                               | 
 |------|----------------------------------------|
@@ -163,16 +160,33 @@
 #### GIT Commands
 
 
-|Sl.No.| Commands                     | Description                       |
-|------|------------------------------|-----------------------------------|
-|  01. |git clone --bare https://github.com/planetoftheweb/learnangular.git .git |         |
-|  02. |git config --bool core.bare false| To change bare repository to normal repository |
-|  03. |git reset --hard 	           |                    |
-|  04. |git branch                     |                    |
-|  05. |git checkout `branch_name`     | Switch to branch   |	
-|  06. |git stash   				   | Save local changes |
-|  07. |git init                       |                    |
-		
+|Sl.No.| Commands      | Description                                     |
+|------|---------------|-------------------------------------------------|
+| 01.  |git clone      |Clone a repository into a new directory         |
+| 02.  |git config --bool core.bare false| To change bare repository to normal repository |
+| 03.  |git reset      |Reset current HEAD to the specified state  |
+| 04.  |git branch     |List, create, or delete branches          |
+| 05.  |git checkout   |Switch branches or restore working tree files|	
+| 06.  |git stash      |Save local changes |
+| 07.  |git init       |Create an empty Git repository or reinitialize an existing one|
+| 08.  |git add        |Add file contents to the index |
+| 09.  |git mv         |Move or rename a file, a directory, or a symlink|
+| 10.  |git rm         |Remove files from the working tree and from the index |
+| 11.  |git bisect     |Use binary search to find the commit that introduced a bug|
+| 12.  |git grep       |Print lines matching a pattern|
+| 13.  |git log        |Show commit logs|
+| 14.  |git show       |Show various types of objects|
+| 15.  |git status     |Show the working tree status|
+| 16.  |git commit     |Record changes to the repository |
+| 17.  |git diff       |Show changes between commits, commit and working tree, etc|
+| 18.  |git merge      |Join two or more development histories together|
+| 19.  |git rebase     |Reapply commits on top of another base tip|
+| 20.  |git tag        |Create, list, delete or verify a tag object signed with GPG|
+| 21.  |git fetch      |Download objects and refs from another repository|
+| 22.  |git pull       |Fetch from and integrate with another repository or a local branch|
+| 23.  |git push       |Update remote refs along with associated objects|
+
+
 
 #### TypeScript Commands
 
