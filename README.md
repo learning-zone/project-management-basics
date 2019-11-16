@@ -7,6 +7,7 @@
 
 * [Important Commands List](commands-list.md)
 * [NodeJS Commands List](nodejs-commands.md)
+* [Angular Commands List](angular-commands.md)
 
 
 
