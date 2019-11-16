@@ -132,10 +132,9 @@
 | 70.  |du -sh * | same thing, but for each file and directory. helpful when finding large files taking up space.|
 | 71.  |wc | word count|
 | 72.  |wc -l filename.txt | tells how many lines are in filename.txt|
-| 73.  |cp | copy a file|
-| 74.  |cp filename filename.backup | copies filename to filename.backup|
-| 75.  |cp -a /home/burst/new_design/* /home/burst/public_html/ | copies all files, retaining permissions form one directory to another.|
-| 76.  |find * -type d|xargs -i cp --verbose php.ini {} | copies your php.ini file into all directories recursively.|
-| 77.  |kill | terminate a system process|
-| 78.  |kill -9 PID EG | kill -9 431|
-| 79.  |kill PID EG | kill 10550|
+| 73.  |cp filename filename.backup | copies filename to filename.backup|
+| 74.  |cp -a /home/burst/new_design/* /home/burst/public_html/ | copies all files, retaining permissions form one directory to another.|
+| 75.  |find * -type d|xargs -i cp --verbose php.ini {} | copies your php.ini file into all directories recursively.|
+| 76.  |kill | terminate a system process|
+| 77.  |kill -9 PID EG | kill -9 431|
+| 78.  |kill PID EG | kill 10550|
