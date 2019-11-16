@@ -5,7 +5,7 @@
 
 ### Table of Contents
 
-* [Important Commands List](commands-list.md)
+* [Unix Commands List](unix-commands.md)
 * [NodeJS Commands List](nodejs-commands.md)
 * [Angular Commands List](angular-commands.md)
 
