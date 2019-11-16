@@ -44,7 +44,7 @@
 
 
 
-### DOS Commands
+#### DOS Commands
 
 
 |Sl.No.| Commands                     | Description                       |
@@ -55,3 +55,26 @@
 | 04.  |for /F %a in ('dir /L /B') do rename %a %a | Rename current directory to lowercase |
 | 05.  |del *.tmp/s                   |Clear temporary files |
 | 06.  |netsh wlan set hostednetwork mode=allow ssaid=Hostpot key=12345 | Create wifi hotspot |
+
+#### List of Basic SSH Commands
+
+|Sl.No.| Commands    | Description                                      |
+|------|-------------|--------------------------------------------------|
+| 01.  |ls	         |Show directory contents (list the names of files).|
+| 02.  |cd	         |Change Directory.|
+| 03.  |mkdir	     |Create a new folder (directory).|
+| 04.  |touch	     |Create a new file.|
+| 05.  |rm	         |Remove a file.|
+| 06.  |cat	         |Show contents of a file.|
+| 07.  |pwd	         |Show current directory (full path to where you are right now).|
+| 08.  |cp	         |Copy file/folder.|
+| 09.  |mv	         |Move file/folder.|
+| 10.  |grep	     |Search for a specific phrase in file/lines.|
+| 11.  |find	     |Search files and directories.|
+| 12.  |vi/nano	     |Text editors.|
+| 13.  |history	     |Show last 50 used commands.|
+| 14.  |clear	     |Clear the terminal screen.|
+| 15.  |tar	         |Create & Unpack compressed archives.|
+| 16.  |wget	     |Download files from the internet.|
+| 17.  |du	         |Get file size.|
+
