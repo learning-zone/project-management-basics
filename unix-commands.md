@@ -1,20 +1,5 @@
-## COMMANDS LIST
+## UNIX Commands
 
-
-### DOS Commands
-
-
-|Sl.No.| Commands                     | Description                       |
-|------|------------------------------|-----------------------------------|
-| 01.  |netstat -a -o -n              | Check the available port          |
-| 02.  |taskkill /F /PID 5704         | Freeup the port number            |
-| 03.  |nslookup                      | Name Server Lookup                |
-| 04.  |for /F %a in ('dir /L /B') do rename %a %a | Rename current directory to lowercase |
-| 05.  |del *.tmp/s                   |Clear temporary files |
-| 06.  |netsh wlan set hostednetwork mode=allow ssaid=Hostpot key=12345 | Create wifi hotspot |
-
-
-### UNIX Commands
 
 |Sl.No.| Commands       | Description                       |
 |------|----------------|-----------------------------------|
@@ -56,3 +41,17 @@
 | 36.  |text			|                                    |
 | 37.  |touchz			|                                    |
 | 38.  |usage			|                                    |
+
+
+
+### DOS Commands
+
+
+|Sl.No.| Commands                     | Description                       |
+|------|------------------------------|-----------------------------------|
+| 01.  |netstat -a -o -n              | Check the available port          |
+| 02.  |taskkill /F /PID 5704         | Freeup the port number            |
+| 03.  |nslookup                      | Name Server Lookup                |
+| 04.  |for /F %a in ('dir /L /B') do rename %a %a | Rename current directory to lowercase |
+| 05.  |del *.tmp/s                   |Clear temporary files |
+| 06.  |netsh wlan set hostednetwork mode=allow ssaid=Hostpot key=12345 | Create wifi hotspot |
