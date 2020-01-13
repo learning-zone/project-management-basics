@@ -9,6 +9,7 @@
 * [NodeJS Commands List](nodejs-commands.md)
 * [Angular Commands List](angular-commands.md)
 * [Unix Commands List](unix-commands.md)
+* [Puzzles](puzzles.md)
 
 
 
