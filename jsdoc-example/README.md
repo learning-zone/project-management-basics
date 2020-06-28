@@ -66,3 +66,18 @@ const num = 1
 
 function play(song) {}
 ```
+
+#### Typedef Shorthand
+
+```javascript
+/**
+ * A song
+ * @typedef {{title: string, artist: string, year: number}} Song
+ */
+/**
+ * Plays a song
+ * @param {Song} song - The {@link Song} to be played
+ */
+
+function play(song) {}
+```
