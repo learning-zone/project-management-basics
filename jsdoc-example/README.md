@@ -35,3 +35,16 @@ function foo(n) {
 @param {string[]} n	Array of strings
 @return {Promise<string[]>} n	Promise fulfilled by array of strings
 ```
+
+#### Variables
+
+```javascript
+/**
+ * @type {number}
+ */
+var num = 1
+/**
+ * @const {number}
+ */
+const num = 1
+```
