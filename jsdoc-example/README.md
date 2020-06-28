@@ -81,3 +81,40 @@ function play(song) {}
 
 function play(song) {}
 ```
+
+#### Importing types
+
+```javascript
+/**
+ * @typedef {import('./Foo').default} Bar
+ */
+
+/**
+ * @param {Bar} x
+ */
+
+function test(x) {}
+```
+
+#### Other keywords
+
+```javascript
+/**
+ * @throws {FooException}
+ * @private
+ * @deprecated
+ * @see
+ *
+ * @function
+ * @class
+ */
+```
+
+#### Renaming
+
+```javascript
+/*
+ * @alias Foo.bar
+ * @name Foo.bar
+ */
+```
