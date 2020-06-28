@@ -12,6 +12,7 @@
     "opts": {
         "recurse": true,
         "destination": "./docs",
-        "template": "custom-template"
+        "template": "./custom-template",
+        "tutorials": "./tutorials"
     }
 }

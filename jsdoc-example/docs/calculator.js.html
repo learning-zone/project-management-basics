@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: JSDoc Example</title>
+    <title>JSDoc: Source: calculator.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,53 @@
 
 <div id="main">
 
-    <h1 class="page-title">JSDoc Example</h1>
+    <h1 class="page-title">Source: calculator.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Calculator module
+ * @module calculator
+ */
 
+ /**
+  * Add to number
+  * @param {number} n1 - First number
+  * @param {number} n2 - Second number
+  * @returns {number} - Sum of n1 and n2
+  */
+ exports.add = (n1, n2) => n1 + n2;
 
-    <h3> </h3>
+ /**
+  * Multiply two numbers
+  * @param {number} n1 - First number
+  * @param {number} n2 - Second number
+  * @returns {number} - Product of n1 and n2
+  */
+ exports.multiply = (n1, n2) => n1 * n2;
 
+ /**
+  * Subtract two numbers
+  * @param {number} n1 - First number
+  * @param {number} n2 - Second number
+  * @returns {number} - Difference of n1 and n2
+  */
+ exports.subtact = (n1, n2) => n1 - n2;
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+ /**
+  * Divide two numbers
+  * @param {number} n1 - First number
+  * @param {number} n2 - Second number
+  * @returns {number} - Quotient of n1 and n2
+  */
+ exports.divide = (n1, n2) => n1 / n2;</code></pre>
+        </article>
+    </section>
 
 
 

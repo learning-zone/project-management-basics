@@ -1,3 +1,5 @@
+
+const { add, subtract, divide, multiply } = require('./calculator');
 /**
  * Student Name
  * @type {string}
@@ -85,3 +87,5 @@ const personObject = new Person({
     name: 'John Doe',
     age: 30
 });
+
+console.log(add(20, 30));
