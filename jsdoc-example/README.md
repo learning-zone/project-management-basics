@@ -1,9 +1,8 @@
 # JSDoc Example
 
-
-* *[JSDoc Generated Documentation Live Example](https://learning-zone.github.io/general-interview-questions/jsdoc-example/docs/)*
-
 * *[Setup Guide](setup-guide.md)*
+* *[Live Example](https://learning-zone.github.io/general-interview-questions/jsdoc-example/docs/)*
+
 
 #### Functions
 
