@@ -35,6 +35,12 @@ can use the `--destination` (`-d`) option to specify another directory.
 
 Run `jsdoc --help` for a complete list of command-line options.
 
+#### Generates Documentation
+
+```
+npm run doc
+```
+
 ## Templates and tools
 
 The JSDoc community has created templates and other tools to help you generate
