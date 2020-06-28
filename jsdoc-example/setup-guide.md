@@ -21,11 +21,94 @@ To install the latest version on npm locally and save it in your package's
 
 **Step 02**:
 
-Create a directory and a `package.json` file 
+Create a directory and a `package.json` file using below command
 
 ```
     npm init -y
 ```
+```
+{
+  "name": "jsdoc-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdoc": "^3.6.4"
+  }
+}
+
+```
+**Step 03**:  
+
+Create a `jsdoc.json` file inside folder
+
+```
+{
+    "source": {
+        "include": ["src"],
+        "includePattern": ".js$",
+        "excludePattern": "(node_modules/|docs)"
+    },
+    "plugins": ["plugins/markdown"],
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true
+    },
+    "opts": {
+        "recurse": true,
+        "destination": "./docs",
+        "template": "./custom-template",
+        "tutorials": "./tutorials",
+        "readme": "./README.md"
+    }
+}
+```
+**Step 04**:
+
+Create a src folder and add the following comments/code
+
+```javascript
+/**
+ * Class to create a person object
+ */
+class Person {
+  /**
+   * 
+   * @param {Object} personInfo Information about the person 
+   */
+  constructor(personInfo) {
+      /**
+       * @property {string} name Person Name
+       */
+      this.name = personInfo.name;
+      /**
+       * @property {string} name Person Age
+       */
+      this.age = personInfo.age
+  }
+  
+  /**
+   * @property {Function} greet A greeting with the name and age
+   * @returns void
+   */
+  greet() {
+      console.log(`Hello, my name is ${this.name} and I am ${this.age}`);
+  }
+}
+```
+Now run jsdoc in your command line
+```
+    npm run doc
+```
+This will create the docs directory which contains the mini-documentation for the Person Class. Open the docs/index.html file in your browser
+
+<img src="assets/jsdoc.png" alt="JSDoc Image" />
 
 
 If you installed JSDoc locally, the JSDoc command-line tool is available in
