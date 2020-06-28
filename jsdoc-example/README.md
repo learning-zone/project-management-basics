@@ -48,3 +48,21 @@ var num = 1
  */
 const num = 1
 ```
+
+#### Typedef
+
+```javascript
+/**
+ * A song
+ * @typedef {Object} Song
+ * @property {string} title - The title
+ * @property {string} artist - The artist
+ * @property {number} year - The year
+ */
+/**
+ * Plays a song
+ * @param {Song} song - The {@link Song} to be played
+ */
+
+function play(song) {}
+```
