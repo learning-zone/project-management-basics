@@ -1,4 +1,4 @@
-## JSDoc Example
+# JSDoc Example
 
 
 An API documentation generator for JavaScript.
