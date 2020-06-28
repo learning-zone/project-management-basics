@@ -4,8 +4,7 @@
 An API documentation generator for JavaScript.
 
 
-Installation and Usage
-----------------------
+## Installation and Usage
 
 JSDoc supports stable versions of Node.js 8.15.0 and later. You can install
 JSDoc globally or in your project's `node_modules` folder.
