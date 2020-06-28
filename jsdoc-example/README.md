@@ -1,8 +1,9 @@
 # JSDoc Example
 
 
-An API documentation generator for JavaScript. [Live Demo](https://learning-zone.github.io/general-interview-questions/jsdoc-example/docs/)
+* *[JSDoc Generated Documentation Live Example](https://learning-zone.github.io/general-interview-questions/jsdoc-example/docs/)*
 
+* *[Setup Guide](setup-guide.md)*
 
 #### Functions
 
