@@ -4,15 +4,15 @@
 An API documentation generator for JavaScript.
 
 
-Installation and Usage
-----------------------
+## Installation and Setup
 
-JSDoc supports stable versions of Node.js 8.15.0 and later. You can install
-JSDoc globally or in your project's `node_modules` folder.
+
+**Step 01**: 
 
 To install the latest version on npm globally
 
     npm install -g jsdoc
+
 
 To install the latest version on npm locally and save it in your package's
 `package.json` file:
