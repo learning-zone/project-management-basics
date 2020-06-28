@@ -108,7 +108,7 @@ Now run jsdoc in your command line
 ```
 This will create the docs directory which contains the mini-documentation for the Person Class. Open the docs/index.html file in your browser
 
-<img src="assets/jsdoc.png" alt="JSDoc Image" />
+<img src="./assets/jsdoc.png" alt="JSDoc Image" />
 
 
 If you installed JSDoc locally, the JSDoc command-line tool is available in
