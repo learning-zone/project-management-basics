@@ -21,7 +21,7 @@ To install the latest version on npm locally and save it in your package's
 
 **Step 02**:
 
-Create a directory and a `package.json` file using below command
+Create a `package.json` file inside jsdoc-example folder using below command
 
 ```
     npm init -y
@@ -46,7 +46,7 @@ Create a directory and a `package.json` file using below command
 ```
 **Step 03**:  
 
-Create a `jsdoc.json` file inside folder
+Create a `jsdoc.json` file inside jsdoc-example folder
 
 ```
 {
@@ -71,7 +71,7 @@ Create a `jsdoc.json` file inside folder
 ```
 **Step 04**:
 
-Create a src folder and add the following comments/code
+Create a src folder and add the following code
 
 ```javascript
 /**
