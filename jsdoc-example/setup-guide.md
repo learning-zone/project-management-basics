@@ -19,6 +19,14 @@ To install the latest version on npm locally and save it in your package's
 
     npm install --save-dev jsdoc
 
+**Step 02**:
+
+Create a directory and a `package.json` file 
+
+```
+    npm init -y
+```
+
 
 If you installed JSDoc locally, the JSDoc command-line tool is available in
 `./node_modules/.bin`. To generate documentation for the file
