@@ -1,19 +1,15 @@
-## General Questions and Answers
+# General Questions and Answers
 
 *Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
-
-### Table of Contents
-
+## Table of Contents
 
 * *[NodeJS Commands List](nodejs-commands.md)*
 * *[Angular Commands List](angular-commands.md)*
 * *[Unix Commands List](unix-commands.md)*
 * *[Puzzles](puzzles.md)*
 
-
-
-#### Q. What are the scientific ways to do project estimation?
+## Q. What are the scientific ways to do project estimation?
 
 There are many different types of estimation techniques used in project management with various streams like Engineering, IT, Construction, Agriculture, Accounting, etc. A Project manager is often challenged to align mainly six project constraints - **Scope**, **Time**, **Cost**, **Quality**, **Resources** and **Risk** in order to accurately estimate the project. The common questions that come into the mind of a project manager at the start of the project are –
 
@@ -58,7 +54,11 @@ This technique uses assumptions based on varying factors like scope, time, cost,
 * Identify the possible risks and assumptions
 * Define the resource and cost estimate to the completion of each activity, component and work package
 
-#### Q. What is planning poker estimation technique?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is planning poker estimation technique?
 
 Planning poker, also called Scrum poker, is a consensus-based, gamified technique for estimating, mostly used to estimate effort or relative size of development goals in software development. Planning Poker is an agile estimating and planning technique that is consensus based. To start a poker planning session, the product owner or customer reads an agile user story or describes a feature to the estimators. 
 
@@ -80,7 +80,11 @@ Planning poker combines three methods of estimation −
 
 * **Disaggregation** − Disaggregation estimation is done by splitting a user story into smaller, easier-to-estimate user stories. The user stories to be included in a sprint are normally in the range of two to five days to develop. Hence, the user stories that possibly take longer duration need to be split into smaller use-Cases. This approach also ensures that there would be many stories that are comparable.
 
-#### Q. What is Ballpark Figures estimate?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is Ballpark Figures estimate?
 
 A ballpark figure is a rough numerical estimate or approximation of the value of something that is otherwise unknown. Ballpark figures are commonly used by accountants, salespersons, and other professionals to estimate current or future results. A stockbroker could use a ballpark figure to estimate how much money a client might have at some point in the future, given a certain rate of growth. A salesperson could use a ballpark figure to estimate how long a product a customer was thinking about buying might be viable.
 
@@ -97,3 +101,7 @@ Ballpark figures are also used everywhere in the business world, such as estimat
 * A ballpark figure is an estimate of what something might amount to numerically when a more accurate number is assessed, such as the cost of a product.
 * Ballpark figures can be helpful in establishing a placeholder, for purposes of conversation or estimation, when a more precise number is not available.
 * Ballpark figures are used in daily life and in many aspects of business; however, it is important to remember it is just an estimate, not an accurate read of something.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
