@@ -4,17 +4,17 @@
 |------|----------------------------|-------------------------------|
 | 01. |npm install node@14.8.0      | Install node specific version |
 | 02. |npm init 					| Creates package.json |
-| 03. |npm install                  |                      |
-| 04. |bower install                |                      |
+| 03. |npm install                  | Install the dependencies in the local node_modules folder |
+| 04. |bower install                | package manager      |
 | 05. |npm install -g gulp          |                      |
 | 06. |npm install -g bower         |                      |
-| 07. |npm install -g http-server   |                      |
+| 07. |npm install -g live-server   |                      |
 | 08. |npm install -g grunt-cli     |                      |
-| 09. |http-server					| Start NodeJs Server  |
+| 09. |live-server					| Start NodeJs Server  |
 | 10. |npm install -S express       |                      |
 | 11. |npm install -S body-parser   |                      |
 | 12. |npm start                    |                      |
-| 13. |gulp develop 				|	 Server Start      |
+| 13. |gulp develop 				| Server Start      |
 | 14. |gulp help 					| gulp Help            |
 | 15. |gulp build					| Clean and minification into single file |
 | 16. |gulp serve                   |                         |
