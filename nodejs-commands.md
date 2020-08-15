@@ -2,7 +2,7 @@
 
 |Sl.No.| Commands                   | Description                   |
 |------|----------------------------|-------------------------------|
-| 01. |npm install node@8.10.0      | Install node specific version |
+| 01. |npm install node@14.8.0      | Install node specific version |
 | 02. |npm init 					| Creates package.json |
 | 03. |npm install                  |                      |
 | 04. |bower install                |                      |
@@ -72,5 +72,5 @@
 | 68. |grunt watch                               |                                              |
 | 69. |ng add @angular/material                  |                                              |
 | 70. |npm install -g live-server                |                                              | 
-
-  
+| 71. |npm link                    | create a symlink in the global folder |
+| 72. |npm link redis               | link-install the package |
