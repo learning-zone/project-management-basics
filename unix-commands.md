@@ -1,6 +1,5 @@
 ## UNIX Commands
 
-
 |Sl.No.| Commands       | Description                       |
 |------|----------------|-----------------------------------|
 | 01.  |appenToFile		|                                   |
@@ -42,20 +41,31 @@
 | 37.  |touchz			|                                    |
 | 38.  |usage			|                                    |
 
-
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 ### DOS Commands
-
 
 |Sl.No.| Commands                     | Description                       |
 |------|------------------------------|-----------------------------------|
 | 01.  |netstat -a -o -n              | Check the available port          |
-| 02.  |taskkill /F /PID 5704         | Freeup the port number            |
-| 03.  |nslookup                      | Name Server Lookup                |
-| 04.  |for /F %a in ('dir /L /B') do rename %a %a | Rename current directory to lowercase |
-| 05.  |del *.tmp/s                   |Clear temporary files |
-| 06.  |netsh wlan set hostednetwork mode=allow ssaid=Hostpot key=12345 | Create wifi hotspot |
+| 02.  |netstat -ab	                  | Available Ports |
+| 03.  |taskkill /F /PID 5704         | Freeup the port number            |
+| 04.  |nslookup                      | Name Server Lookup                |
+| 05.  |for /F %a in ('dir /L /B') do rename %a %a | Rename current directory to lowercase |
+| 06.  |del *.tmp/s                   | Clear temporary files |
+| 07.  |netsh wlan set hostednetwork mode=allow ssaid=Hostpot key=12345 | Create wifi hotspot |
+| 08.  |wmic bios get serialnumber    | Computer Serial No |
+| 09.  |wmic bios get smbiosbiosversion | BIOS Version |
+| 10.  |net localgroup Administrators | Administrators Access Test |
+| 11.  |ipconfig/all                  | All IP Address |
+| 12.  |hostname                      | Host Name |
+| 13.  |systeminfo                    | DNS Name |
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 ### List of Basic SSH Commands
 
@@ -138,3 +148,7 @@
 | 76.  |kill | terminate a system process|
 | 77.  |kill -9 PID EG | kill -9 431|
 | 78.  |kill PID EG | kill 10550|
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
