@@ -5,7 +5,6 @@
 ## Table of Contents
 
 * *[DOS Commands](dos-commands.md)*
-* *[Linux Commands](linux-commands.md)*
 * *[Puzzles](puzzles.md)*
 
 <br/>
