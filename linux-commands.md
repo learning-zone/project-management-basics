@@ -1,45 +1,27 @@
 # LINUX Commands
 
-|Sl.No.| Commands       | Description                       |
-|------|----------------|-----------------------------------|
-| 01.  |appenToFile		|                                   |
-| 02.  |cat 			|                                   |
-| 03.  |checksum 		|                                   |
-| 04.  |chgrp			|                                   |
-| 05.  |chmod			|                                   |
-| 06.  |chown			|                                   |
-| 07.  |copyFromLocal	|                                   |
-| 08.  |copyToLocal		|                                   |
-| 09.  |count			|                                   |
-| 10.  |cp				|                                   |
-| 11.  |createSnapshot	|                                   |
-| 12.  |deleteSnapshot	|                                   |
-| 13.  |df				|                                   |
-| 14.  |du				|                                   |
-| 15.  |expunge			|                                   |
-| 16.  |find			|                                   |
-| 17.  |get				|                                   |
-| 18.  |getfacl			|                                   |
-| 19.  |getfattr		|                                   |
-| 20.  |getmerge		|                                   |
-| 21.  |mkdir			|                                   |
-| 22.  |moveFromLocal	|                                   |
-| 23.  |moveToLocal		|                                   |
-| 24.  |mv				|                                   |
-| 25.  |nohup			| Nohup is very helpful when you have to execute a shell script or command that take a long time to finish. Nohup stands for no hang up. |
-| 26.  |put				|                                    |
-| 27.  |renameSnapshot	|                                    |
-| 28.  |rm				|                                    |
-| 29.  |rmdir			|                                    |
-| 30.  |setfacl			|                                    |
-| 31.  |setfattr		|                                    |
-| 32.  |setrep		    |                                    |
-| 33.  |stat			|                                    |
-| 34.  |tail			|                                    |
-| 35.  |test			|                                    |
-| 36.  |text			|                                    |
-| 37.  |touchz			|                                    |
-| 38.  |usage			|                                    |
+|Sl.No.| Commands    | Description                                      |
+|------|-------------|--------------------------------------------------|
+|  01.  |ls         | directory listing|
+|  02.  |ls -al     | formatted listing with hidden files|
+|  03.  |cd dir     |change directory to dir|
+|  04.  |cd         | change to home|
+|  05.  |pwd        | show current directory|
+|  06.  |mkdir dir  | create a directory dir|
+|  07.  |rm file    | delete file|
+|  08.  |rm -r dir  | delete directory dir|
+|  09.  |rm -f file | force remove file|
+|  10.  |rm -rf dir | force remove directory dir *|
+|  11.  |cp file1 file2 | copy file1 to file2|
+|  12.  |cp -r dir1 dir2 | copy dir1 to dir2; create dir2 if it doesn't exist|
+|  13.  |mv file1 file2 | rename or move file1 to file2 if file2 is an existing directory, moves file1 into directory file2|
+|  14.  |ln -s file link | create symbolic link link to file|
+|  15.  |touch file | create or update file|
+|  16.  |cat > file | places standard input into file|
+|  17.  |more file  | output the contents of file|
+|  18.  |head file  | output the first 10 lines of file|
+|  19.  |tail file  | output the last 10 lines of file|
+|  20.  |tail -f file | output the contents of file as it grows, starting with the last 10 lines|
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
