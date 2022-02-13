@@ -1,4 +1,4 @@
-## UNIX Commands
+## LINUX Commands
 
 |Sl.No.| Commands       | Description                       |
 |------|----------------|-----------------------------------|

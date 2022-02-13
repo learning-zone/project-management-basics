@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-* *[Unix Commands](unix-commands.md)*
+* *[Linux Commands](linux-commands.md)*
 * *[Puzzles](puzzles.md)*
 
 <br/>
