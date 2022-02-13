@@ -33,13 +33,13 @@
 
 |Sl.No.| Commands    | Description              |
 |------|-------------|--------------------------|
-|      ||ps | display your currently active processes|
-|      ||top | display all running processes|
-|      ||kill pid | kill process id pid|
-|      ||killall proc | kill all processes named proc *|
-|      ||bg | lists stopped or background jobs; resume a stopped job in the background|
-|      ||fg | brings the most recent job to foreground|
-|      ||fg n | brings job n to the foreground|
+|  01. |ps | display your currently active processes|
+|  02. |top | display all running processes|
+|  03. |kill pid | kill process id pid|
+|  04. |killall proc | kill all processes named proc *|
+|  05. |bg | lists stopped or background jobs; resume a stopped job in the background|
+|  06. |fg | brings the most recent job to foreground|
+|  07. |fg n | brings job n to the foreground|
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -86,21 +86,21 @@
 
 |Sl.No.| Commands    | Description              |
 |------|-------------|--------------------------|
-|  01.  |date | show the current date and time|
-|  02.  |cal | show this month's calendar|
-|  03.  |uptime | show current uptime|
-|  04.  |w | display who is online|
-|  05.  |whoami | who you are logged in as|
-|  06.  |finger user | display information about user|
-|  07.  |uname -a | show kernel information|
-|  08.  |cat /proc/cpuinfo | cpu information|
-|  09.  |cat /proc/meminfo | memory information|
-|  10.  |man command | show the manual for command|
-|  11.  |df | show disk usage|
-|  12.  |du | show directory space usage|
-|  13.  |free | show memory and swap usage|
-|  14.  |whereis app | show possible locations of app|
-|  15.  |which app | show which app will be run by default|
+|  01. |date | show the current date and time|
+|  02. |cal | show this month's calendar|
+|  03. |uptime | show current uptime|
+|  04. |w | display who is online|
+|  05. |whoami | who you are logged in as|
+|  06. |finger user | display information about user|
+|  07. |uname -a | show kernel information|
+|  08. |cat /proc/cpuinfo | cpu information|
+|  09. |cat /proc/meminfo | memory information|
+|  10. |man command | show the manual for command|
+|  11. |df | show disk usage|
+|  12. |du | show directory space usage|
+|  13. |free | show memory and swap usage|
+|  14. |whereis app | show possible locations of app|
+|  15. |which app | show which app will be run by default|
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
