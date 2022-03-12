@@ -39,7 +39,7 @@ Total time spent: 3 + 10 + 2 = 15 minutes.
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. How can I divide an L shape into 4 equal parts?
+## Q. How to divide the L shape into 4 equal parts?
 
 The first part is true. First consider the possibilities for positioning the tromino in the lower right corner:
 
