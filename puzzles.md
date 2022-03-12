@@ -1,8 +1,6 @@
 # Puzzles
 
-## Q. There is a room with a door (closed) and three light bulbs. Outside the room there are three switches, connected to the bulbs. You may manipulate the switches as you wish, but once you open the door you can't change them. Identify each switch with its bulb.
-
-**Solution:**  
+## Q. There is a room with a door (closed) and three light bulbs. Outside the room there are three switches, connected to the bulbs. You may manipulate the switches as you wish, but once you open the door you can't change them. Identify each switch with its bulb?
 
 Let the bulbs be X, Y and Z
 
@@ -66,6 +64,24 @@ There is another packing:
 </p>
 
 For connected packings we have that the axis of symmetry for the tromino can be crossed 0, 2 or 4 times. An odd crossing number partitions the tromino into 2 with an odd number of 'polytroms' left over
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. If you have a 5-litre jug and a 3-litre jug, how would you measure exactly 4 litres?
+
+**Steps:**
+
+* Fill the 3 L jug and put the water in the 5 Ljug.
+* Then fill the 3 L jug again and use it to fill the 5 L jug. You now have 1 L water un the 3 L jug.
+* Empty the 5 L jug and put the 1 L water into it.
+* Fill the 3 L jug and put that in the 5L jug containing 1 L water.
+* You now have 4 L water.
+
+<p align="center">
+  <img src="assets/jar.jpg" alt="Jar" width="800px" />
+</p>
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
