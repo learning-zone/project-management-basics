@@ -107,6 +107,10 @@ Ballpark figures are also used everywhere in the business world, such as estimat
 #### Q. What are the tools used for requirements gathering?
 #### Q. Explain the concept of RAID in project management?
 #### Q. What are the techniques used to define the scope of a project? 
+#### Q. Explain Ishikawa/ Fishbone diagrams?
+#### Q. What is the process of calculating the three-point estimating method?
+#### Q. What is Work Breakdown Structure (WBD)?
+#### Q. What is the Pareto principle analysis?
 
 *ToDo*
 
