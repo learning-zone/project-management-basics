@@ -106,6 +106,7 @@ Ballpark figures are also used everywhere in the business world, such as estimat
 
 #### Q. What are the tools used for requirements gathering?
 #### Q. Explain the concept of RAID in project management?
+#### Q. What are the techniques used to define the scope of a project? 
 
 *ToDo*
 
