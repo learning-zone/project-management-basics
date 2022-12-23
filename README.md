@@ -104,6 +104,10 @@ Ballpark figures are also used everywhere in the business world, such as estimat
 * Ballpark figures can be helpful in establishing a placeholder, for purposes of conversation or estimation, when a more precise number is not available.
 * Ballpark figures are used in daily life and in many aspects of business; however, it is important to remember it is just an estimate, not an accurate read of something.
 
+## Q. What are the tools used for requirements gathering?
+
+*ToDo*
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
