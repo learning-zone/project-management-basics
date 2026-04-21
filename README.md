@@ -35,6 +35,7 @@
 | 18 | [What is the difference between a Product Owner and a Project Manager?](#q-what-is-the-difference-between-a-product-owner-and-a-project-manager) |
 | 19 | [What is Change Management in project management?](#q-what-is-change-management-in-project-management) |
 | 20 | [What are DORA metrics and why do they matter?](#q-what-are-dora-metrics-and-why-do-they-matter) |
+| 21| [Software Architect Interview Questions](#-24-software-architect-interview-questions)|
 
 <br/>
 
@@ -983,4 +984,730 @@ Modern engineering organisations combine DORA (flow and stability metrics) with 
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
+</div>
+
+## # 21. SOFTWARE ARCHITECT INTERVIEW QUESTIONS
+
+<br/>
+
+## Q. What is the difference between Software Architecture and Software Design?
+
+| Aspect | Software Architecture | Software Design |
+|---|---|---|
+| **Scope** | High-level structure of the entire system | Low-level, component/module level decisions |
+| **Focus** | System-wide quality attributes (scalability, availability, security) | Implementation details (classes, algorithms, patterns) |
+| **Stakeholders** | Business, management, all technical teams | Primarily development team |
+| **Changes** | Expensive and hard to change | Easier to refactor |
+| **Artifacts** | Architectural diagrams, ADRs, system blueprints | Class diagrams, sequence diagrams, pseudocode |
+
+**Key principle:** Architecture defines the *skeleton* of a system; design fleshes it out. A wrong architectural decision is far more costly to fix than a wrong design decision.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are the key quality attributes (Non-Functional Requirements) an architect must consider?
+
+Quality attributes drive architectural decisions and trade-offs:
+
+| Attribute | Description | Common Tactics |
+|---|---|---|
+| **Scalability** | Handle increasing load | Horizontal scaling, partitioning, load balancing |
+| **Availability** | System uptime (e.g., 99.99%) | Redundancy, failover, health checks |
+| **Performance** | Response time, throughput | Caching, async processing, CDN |
+| **Security** | Protect data and access | Auth/authz, encryption, input validation |
+| **Maintainability** | Ease of changes | Modularity, low coupling, documentation |
+| **Testability** | Ability to verify behavior | Dependency injection, contract tests |
+| **Observability** | System insight in production | Logging, metrics, distributed tracing |
+| **Resilience** | Recover from failures | Circuit breaker, retry, bulkhead |
+| **Portability** | Deploy across environments | Containerization, IaC, 12-Factor App |
+
+> Trade-offs are inevitable — optimizing for all attributes simultaneously is impossible. An architect must communicate and justify trade-offs clearly.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. Explain Microservices Architecture and when you would NOT use it.
+
+**Microservices Architecture** decomposes an application into small, independently deployable services, each owning its data and communicating over APIs (REST, gRPC, messaging).
+
+**Benefits:**
+- Independent deployment and scaling per service
+- Technology heterogeneity (polyglot)
+- Fault isolation
+- Smaller, focused teams (Conway\'s Law alignment)
+
+**When NOT to use microservices:**
+
+1. **Small team / startup** — operational overhead outweighs benefits; a well-structured monolith is faster to iterate
+2. **Unclear domain boundaries** — premature decomposition leads to chatty, tightly coupled services (distributed monolith)
+3. **Low operational maturity** — microservices require CI/CD, container orchestration, observability, and service mesh
+4. **Latency-sensitive workflows** — network hops between services add latency compared to in-process calls
+5. **Shared database requirements** — if services must share a database, you lose the key benefit of independent data ownership
+
+**Martin Fowler\'s advice:** Start with a monolith, identify seams, then extract services as boundaries become clear.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the CAP Theorem and how does it influence database selection?
+
+**CAP Theorem** states that a distributed system can guarantee at most **two** of the three properties simultaneously:
+
+- **C — Consistency**: Every read receives the most recent write or an error
+- **A — Availability**: Every request receives a (non-error) response, without guarantee it\'s the latest data
+- **P — Partition Tolerance**: The system continues to operate despite network partitions
+
+Since **network partitions are unavoidable** in distributed systems, the real trade-off is **CP vs AP**:
+
+| Choice | Example Databases | Use Case |
+|---|---|---|
+| **CP** (Consistent + Partition-tolerant) | HBase, MongoDB (strong mode), Zookeeper | Financial transactions, inventory systems |
+| **AP** (Available + Partition-tolerant) | Cassandra, CouchDB, DynamoDB (eventual) | Social feeds, shopping carts, DNS |
+
+**PACELC** extends CAP by also considering latency vs consistency trade-offs when there is no partition.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is Event-Driven Architecture (EDA) and what are its benefits and challenges?
+
+**Event-Driven Architecture** is a design paradigm where components communicate by producing and consuming **events** (immutable records of something that happened) via a message broker (Kafka, RabbitMQ, AWS SNS/SQS).
+
+**Core patterns:**
+- **Event Notification** — producer fires event, consumer reacts independently
+- **Event-Carried State Transfer** — event contains all data needed by consumer (reduces coupling)
+- **Event Sourcing** — system state is derived from an append-only log of events
+- **CQRS** — separates read (Query) and write (Command) models
+
+**Benefits:**
+- Loose temporal and spatial coupling between services
+- High scalability and throughput (async processing)
+- Natural audit trail with event sourcing
+- Easier to add new consumers without modifying producers
+
+**Challenges:**
+- **Eventual consistency** — consumers may lag behind producers
+- **Debugging complexity** — tracing a flow across events requires distributed tracing
+- **Schema evolution** — changing event schemas without breaking consumers (use schema registry)
+- **Ordering guarantees** — partitioned topics may not guarantee global order
+- **Idempotency** — consumers must handle duplicate event delivery
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How would you design a system for 10 million concurrent users?
+
+This is a classic scalability question. A structured answer covers multiple layers:
+
+**1. Load Balancing**
+- Global DNS load balancing (Route 53, Anycast)
+- Regional Layer-7 load balancers (NGINX, AWS ALB)
+
+**2. Stateless Application Tier**
+- Horizontally scalable API servers (Node.js, Go)
+- Session state externalized to Redis
+- Auto-scaling groups based on CPU/request metrics
+
+**3. Caching Strategy**
+- CDN for static assets and edge caching (CloudFront, Fastly)
+- In-memory cache (Redis/Memcached) for hot data
+- Cache-aside or write-through patterns
+
+**4. Database Tier**
+- Read replicas for read-heavy workloads
+- Sharding / partitioning for write scalability
+- Separate OLTP (PostgreSQL) and OLAP (Redshift, BigQuery) stores
+
+**5. Asynchronous Processing**
+- Message queues (Kafka, SQS) for non-critical workloads
+- Background workers for emails, notifications, reports
+
+**6. Observability**
+- Centralized logging (ELK Stack)
+- Distributed tracing (Jaeger, OpenTelemetry)
+- Dashboards and alerting (Grafana, Prometheus)
+
+**7. Resilience**
+- Circuit breakers (Hystrix, Resilience4j)
+- Graceful degradation and feature flags
+- Multi-region active-active or active-passive deployment
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is Domain-Driven Design (DDD) and how does it relate to microservices?
+
+**Domain-Driven Design (DDD)** is a software development approach that aligns the software model with the business domain using a shared language (**Ubiquitous Language**) between developers and domain experts.
+
+**Core DDD concepts:**
+
+| Concept | Description |
+|---|---|
+| **Domain** | The business problem space being solved |
+| **Ubiquitous Language** | Shared vocabulary used in code and conversation |
+| **Bounded Context** | Explicit boundary within which a model applies |
+| **Aggregate** | Cluster of domain objects treated as a single unit with a root entity |
+| **Entity** | Object with a unique identity persisting over time |
+| **Value Object** | Immutable object defined by its attributes, no identity |
+| **Domain Event** | Something significant that happened in the domain |
+| **Repository** | Abstraction for data access |
+| **Anti-Corruption Layer (ACL)** | Translates between bounded contexts to avoid model leakage |
+
+**DDD → Microservices mapping:**
+- Each **Bounded Context** maps naturally to a **microservice**
+- **Domain Events** become the messages exchanged between services
+- Aggregates define **transaction boundaries** (don\'t span aggregate boundaries in a single transaction)
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are the SOLID principles and how do they apply at the architectural level?
+
+| Principle | Statement | Architectural Application |
+|---|---|---|
+| **S** — Single Responsibility | A module should have one reason to change | Each microservice owns one business capability |
+| **O** — Open/Closed | Open for extension, closed for modification | Use plugin architectures, feature flags, strategy pattern |
+| **L** — Liskov Substitution | Subtypes must be substitutable for base types | Enforce API contracts; a service upgrade must not break consumers |
+| **I** — Interface Segregation | Clients shouldn\'t depend on interfaces they don\'t use | Design fine-grained APIs; avoid fat shared libraries |
+| **D** — Dependency Inversion | Depend on abstractions, not concretions | Use dependency injection; services depend on interfaces, not implementations |
+
+At scale, SOLID applies across service and module boundaries, not just within a class hierarchy.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. Explain the Strangler Fig Pattern for legacy system migration.
+
+The **Strangler Fig Pattern** (Martin Fowler) enables incremental migration from a legacy monolith to a new architecture without a risky "big-bang" rewrite.
+
+**Steps:**
+1. Place a **facade/proxy** (API Gateway or reverse proxy) in front of the legacy system
+2. Identify a bounded feature slice to migrate first
+3. Build the new service implementing that feature
+4. Redirect traffic for that feature from the legacy system to the new service via the facade
+5. Repeat for remaining features until the legacy system is "strangled" (replaced entirely)
+
+**Benefits:**
+- Zero downtime migration
+- Each step is independently tested and reversible
+- Business continuity maintained throughout
+
+**Challenges:**
+- Data synchronization between old and new systems during transition
+- Feature parity validation is complex
+- The facade can become a bottleneck if not designed carefully
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the difference between Orchestration and Choreography in microservices?
+
+| Aspect | Orchestration | Choreography |
+|---|---|---|
+| **Control** | Central orchestrator directs all steps | Each service knows what to do and reacts to events |
+| **Coupling** | Services coupled to orchestrator | Services coupled only to events |
+| **Visibility** | Easy to trace flow in one place | Flow is distributed; harder to visualize |
+| **Failure handling** | Orchestrator manages compensating transactions | Each service handles its own failures |
+| **Example** | Saga orchestrated via a workflow engine (Temporal, AWS Step Functions) | Saga choreographed via domain events on Kafka |
+| **Best for** | Complex business workflows with many decision points | Simple, decoupled event flows |
+
+**Saga Pattern** uses both approaches to handle distributed transactions without two-phase commit (2PC), using compensating transactions to undo completed steps on failure.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you approach API design as an architect? What makes a good API?
+
+**Characteristics of a well-designed API:**
+
+1. **Consistency** — uniform naming conventions, error formats, pagination patterns
+2. **Backward compatibility** — never break existing consumers; use versioning (`/v1/`, `/v2/`)
+3. **Principle of Least Surprise** — behavior should match developer expectations
+4. **Idempotency** — `PUT`, `DELETE`, and retry-safe `POST` operations should be idempotent
+5. **Proper HTTP semantics** — correct status codes, verbs, and headers
+6. **Pagination and filtering** — for collection endpoints; avoid unbounded responses
+7. **Security by design** — authentication, authorization, rate limiting, input validation at API layer
+8. **Documentation** — OpenAPI/Swagger specs as the contract; treat docs as code
+
+**API styles and trade-offs:**
+
+| Style | Best For | Drawbacks |
+|---|---|---|
+| REST | CRUD resources, broad client support | Over-fetching/under-fetching |
+| GraphQL | Flexible queries, mobile clients | Complex caching, N+1 queries |
+| gRPC | High-performance internal services | Less browser-friendly, steeper learning curve |
+| WebSockets | Real-time bidirectional communication | Stateful, harder to scale |
+| AsyncAPI / Messaging | Event-driven, async workflows | Eventual consistency, debugging complexity |
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the 12-Factor App methodology?
+
+The **12-Factor App** is a methodology for building cloud-native, scalable, and maintainable software-as-a-service applications:
+
+| Factor | Principle |
+|---|---|
+| 1. Codebase | One codebase tracked in VCS; many deploys |
+| 2. Dependencies | Explicitly declare and isolate dependencies |
+| 3. Config | Store config in the environment, not code |
+| 4. Backing Services | Treat databases, queues, etc. as attached resources |
+| 5. Build, Release, Run | Strictly separate build and run stages |
+| 6. Processes | Execute the app as stateless processes |
+| 7. Port Binding | Export services via port binding |
+| 8. Concurrency | Scale out via the process model |
+| 9. Disposability | Fast startup, graceful shutdown |
+| 10. Dev/Prod Parity | Keep development and production as similar as possible |
+| 11. Logs | Treat logs as event streams |
+| 12. Admin Processes | Run admin tasks as one-off processes |
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are Architecture Decision Records (ADRs) and why are they important?
+
+An **Architecture Decision Record (ADR)** is a short document that captures an important architectural decision, including its context, the decision made, and the consequences.
+
+**Standard ADR structure (Nygard format):**
+
+```markdown
+**ADR-001: Use PostgreSQL as the primary datastore**
+
+**Status**
+
+Accepted
+
+**Context**
+
+We need a relational datastore that supports ACID transactions for our
+order management system. The team has strong SQL expertise.
+
+**Decision**
+
+We will use PostgreSQL 15 hosted on AWS RDS with read replicas.
+
+**Consequences**
+
+- Strong consistency and ACID guarantees for order records
+- Need to plan for schema migrations (use Flyway/Liquibase)
+- Horizontal write scaling requires sharding strategy in the future
+- Licensing: open source, no cost concerns
+```
+
+**Why ADRs matter:**
+- Create institutional memory — new team members understand *why* decisions were made
+- Prevent re-litigating settled decisions
+- Make trade-offs explicit and reviewable
+- Can be stored in the codebase (`/docs/adr/`) and version-controlled alongside the code
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you ensure security in a distributed system architecture?
+
+**Defense in Depth** — apply security controls at every layer:
+
+**1. Network Layer**
+- VPC / private subnets for internal services
+- WAF (Web Application Firewall) at the edge
+- TLS 1.3 for all in-transit communication
+- Zero Trust Network Access (ZTNA) — no implicit trust based on network location
+
+**2. Identity and Access**
+- OAuth 2.0 + OpenID Connect for user authentication
+- JWT with short expiry + refresh token rotation
+- mTLS for service-to-service authentication
+- Role-Based Access Control (RBAC) or Attribute-Based Access Control (ABAC)
+
+**3. Application Layer**
+- Input validation and output encoding (prevent XSS, SQLi)
+- Parameterized queries / ORM usage
+- Secrets management (HashiCorp Vault, AWS Secrets Manager — never hardcode secrets)
+- Dependency scanning (Snyk, Dependabot)
+
+**4. Data Layer**
+- Encryption at rest (AES-256)
+- Data masking and tokenization for PII
+- Database activity monitoring and auditing
+
+**5. Operational**
+- Immutable infrastructure — deploy fresh containers, don\'t patch running instances
+- Security scanning in CI/CD pipeline (SAST, DAST, container scanning)
+- Regular penetration testing
+- Incident response plan and runbooks
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the difference between Horizontal and Vertical scaling?
+
+| Aspect | Vertical Scaling (Scale Up) | Horizontal Scaling (Scale Out) |
+|---|---|---|
+| **Approach** | Add more CPU/RAM/storage to existing machine | Add more machines/instances |
+| **Limit** | Physical hardware ceiling | Virtually unlimited (cloud) |
+| **Cost** | Exponential cost growth at high end | Linear cost growth |
+| **Downtime** | Often requires restart | No downtime with rolling deployment |
+| **Complexity** | Simple — no code changes | Requires stateless design, load balancing |
+| **Best for** | Databases (initially), legacy apps | Stateless web/API tiers, microservices |
+
+**Architectural implication:** Design stateless services from the start to enable horizontal scaling. Offload state to distributed caches (Redis) or databases.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. Explain the Circuit Breaker pattern and how it improves system resilience.
+
+The **Circuit Breaker** pattern (Michael Nygard, *Release It!*) prevents a failing service from causing cascading failures across a distributed system.
+
+**States:**
+
+```
+[CLOSED] ──(failures exceed threshold)──► [OPEN] ──(timeout expires)──► [HALF-OPEN]
+    ▲                                                                          │
+    └──────────────────(probe request succeeds)────────────────────────────────┘
+```
+
+- **CLOSED** — requests flow normally; failure counter is tracked
+- **OPEN** — requests fail immediately (fast fail) without hitting the downstream service; error returned to caller
+- **HALF-OPEN** — a limited number of probe requests are allowed through to test recovery
+
+**Implementation in Node.js (using `opossum`):**
+
+```js
+const CircuitBreaker = require('opossum');
+
+const breaker = new CircuitBreaker(callExternalService, {
+  timeout: 3000,          // if function takes > 3s, trigger failure
+  errorThresholdPercentage: 50,  // open when 50% of requests fail
+  resetTimeout: 10000,    // try again after 10s
+});
+
+breaker.fallback(() => ({ data: null, source: 'cache' }));
+breaker.on('open', () => console.warn('Circuit OPEN — calls short-circuited'));
+breaker.on('halfOpen', () => console.info('Circuit HALF-OPEN — probing'));
+breaker.on('close', () => console.info('Circuit CLOSED — service recovered'));
+```
+
+**Related patterns:** Retry with exponential backoff, Bulkhead (isolate failure domains), Timeout (don\'t wait forever).
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is CQRS and Event Sourcing? When should you use them?
+
+**CQRS (Command Query Responsibility Segregation):**
+
+Separates the **write model** (Commands — mutate state) from the **read model** (Queries — retrieve state).
+
+```
+Client ──► Command Handler ──► Write DB (normalized)
+                                     │
+                              (event/projection)
+                                     ▼
+Client ──► Query Handler ──────► Read DB (denormalized, optimized per use case)
+```
+
+**Benefits:** Read and write models can scale independently; read models can be tailored for specific query patterns.
+
+**Event Sourcing:**
+
+Instead of storing the current state, store a **sequence of events** that led to that state. Current state is derived by replaying events.
+
+```
+events = [
+  { type: 'OrderPlaced', orderId: '1', items: [...] },
+  { type: 'PaymentReceived', orderId: '1', amount: 99.99 },
+  { type: 'OrderShipped', orderId: '1', trackingId: 'XYZ' },
+]
+// currentState = events.reduce(applyEvent, initialState)
+```
+
+**Benefits:** Complete audit trail, temporal queries ("what was the state at time T?"), event replay for projections.
+
+**When to use:**
+- Complex domains with rich audit requirements (finance, healthcare, compliance)
+- Systems that need multiple read projections of the same data
+- **Avoid** for simple CRUD applications — adds significant complexity
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How would you handle distributed transactions across microservices?
+
+Traditional ACID transactions don\'t span service boundaries. Distributed transaction strategies:
+
+**1. Saga Pattern (recommended)**
+
+A sequence of local transactions, each publishing an event/message to trigger the next step. On failure, compensating transactions undo completed steps.
+
+```
+PlaceOrder → ReserveInventory → ProcessPayment → ShipOrder
+                                      │ FAIL
+                              ◄── ReleaseInventory ◄── CancelOrder (compensate)
+```
+
+**2. Two-Phase Commit (2PC) — generally avoided**
+- Requires a distributed transaction coordinator
+- Blocking protocol — participants lock resources during voting
+- Coordinator is a single point of failure
+- Poor performance at scale
+
+**3. Outbox Pattern**
+Ensures atomicity between database writes and message publishing:
+- Write business record + event to an **outbox table** in the same local ACID transaction
+- A relay process (CDC via Debezium, or polling) publishes the event to the message broker
+
+**4. Idempotent Consumers**
+All event consumers must be idempotent (processing the same event twice produces the same result) to handle at-least-once delivery semantics.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the difference between REST, GraphQL, and gRPC? When do you choose each?
+
+| Factor | REST | GraphQL | gRPC |
+|---|---|---|---|
+| **Protocol** | HTTP/1.1 | HTTP/1.1 | HTTP/2 |
+| **Data format** | JSON/XML | JSON | Protocol Buffers (binary) |
+| **Schema** | OpenAPI (optional) | Strongly typed schema | Strongly typed `.proto` |
+| **Fetching** | Fixed endpoint, fixed response | Client-specified fields | Fixed RPC methods |
+| **Performance** | Good | Good (can be N+1 issue) | Excellent (binary, multiplexing) |
+| **Browser support** | Native | Native | Limited (grpc-web required) |
+| **Streaming** | Limited (SSE) | Subscriptions | Native bidirectional streaming |
+
+**Choose REST when:** Building public APIs, browser clients, broad interoperability needed.
+
+**Choose GraphQL when:** Mobile/frontend clients need flexible queries, multiple clients with different data needs, BFF (Backend for Frontend) layer.
+
+**Choose gRPC when:** Internal service-to-service communication, high-throughput/low-latency requirements, polyglot environments needing strong contracts.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you approach observability in a distributed system?
+
+Observability is built on three pillars:
+
+**1. Logs**
+- Structured logging (JSON format) with consistent fields: `traceId`, `spanId`, `userId`, `service`, `level`
+- Centralized log aggregation: ELK Stack (Elasticsearch, Logstash, Kibana) or Grafana Loki
+- Log levels: ERROR (alerts), WARN (investigation), INFO (audit), DEBUG (development only)
+
+**2. Metrics**
+- RED Method: **R**ate (requests/sec), **E**rrors (error rate), **D**uration (latency percentiles — p50, p95, p99)
+- USE Method for infrastructure: **U**tilization, **S**aturation, **E**rrors
+- Tools: Prometheus (collection) + Grafana (visualization)
+
+**3. Traces**
+- Distributed tracing propagates `traceId` across service boundaries
+- Visualize end-to-end request flow and identify bottlenecks
+- Tools: Jaeger, Zipkin, AWS X-Ray; instrumented via **OpenTelemetry**
+
+**Implementation in Node.js:**
+
+```js
+const { NodeSDK } = require('@opentelemetry/sdk-node');
+const { getNodeAutoInstrumentations } = require('@opentelemetry/auto-instrumentations-node');
+const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-http');
+
+const sdk = new NodeSDK({
+  traceExporter: new OTLPTraceExporter({ url: 'http://jaeger:4318/v1/traces' }),
+  instrumentations: [getNodeAutoInstrumentations()],
+});
+sdk.start();
+```
+
+**4. Alerting**
+- Alert on symptoms (high error rate, high latency) not causes (CPU usage)
+- SLO-based alerting: alert when error budget burn rate is too high
+- PagerDuty / OpsGenie for on-call routing
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the difference between a Monolith, SOA, and Microservices?
+
+| Aspect | Monolith | SOA | Microservices |
+|---|---|---|---|
+| **Deployment unit** | Single deployable artifact | Large services (shared ESB) | Many small independent services |
+| **Communication** | In-process function calls | SOAP/ESB (heavy middleware) | REST/gRPC/messaging (lightweight) |
+| **Data** | Shared database | Often shared database | Each service owns its data |
+| **Team structure** | Feature teams span the whole app | Cross-functional but large | Small, autonomous teams (two-pizza rule) |
+| **Scalability** | Scale everything together | Coarse-grained scaling | Fine-grained scaling per service |
+| **Operational complexity** | Low | Medium | High |
+| **Best for** | Early-stage products, small teams | Enterprise integration scenarios | Large-scale, complex domains with many teams |
+
+**Key insight:** Microservices solve organizational complexity (Conway\'s Law) as much as they solve technical scaling problems.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you handle backward compatibility and versioning in APIs?
+
+**Versioning strategies:**
+
+| Strategy | Example | Pros | Cons |
+|---|---|---|---|
+| **URI versioning** | `/v1/users` | Simple, explicit, cacheable | URL proliferation |
+| **Header versioning** | `Accept: application/vnd.api.v2+json` | Clean URLs | Less discoverable |
+| **Query parameter** | `/users?version=2` | Easy testing | Unconventional |
+| **Content negotiation** | `Accept-Version: 2` | REST-purist approach | Less tooling support |
+
+**Backward-compatible changes (non-breaking):**
+- Adding new optional fields to a response
+- Adding new optional query parameters
+- Adding new endpoints
+
+**Breaking changes (require new version):**
+- Removing or renaming fields
+- Changing field types
+- Altering response structure
+
+**Best practices:**
+- Use **semantic versioning** for APIs
+- Support the previous major version for a defined deprecation period (e.g., 12 months)
+- Publish a deprecation timeline and communicate via `Deprecation` and `Sunset` HTTP headers
+- Use **consumer-driven contract testing** (Pact) to detect breaking changes before release
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is Infrastructure as Code (IaC) and why is it important for architects?
+
+**Infrastructure as Code** treats infrastructure provisioning (servers, networks, databases, load balancers) as software — defined in version-controlled files, applied automatically.
+
+**Key tools:**
+
+| Tool | Type | Approach |
+|---|---|---|
+| **Terraform** | Declarative IaC | Multi-cloud, state-based |
+| **AWS CloudFormation** | Declarative IaC | AWS-native |
+| **Pulumi** | Imperative IaC | Real programming languages |
+| **Ansible** | Configuration management | Agentless, YAML playbooks |
+| **Helm** | Kubernetes package manager | Templated K8s manifests |
+
+**Why architects care:**
+- **Reproducibility** — identical environments across dev/staging/prod
+- **Disaster recovery** — rebuild infrastructure from code in minutes
+- **Audit trail** — infrastructure changes are reviewed via pull requests
+- **Drift detection** — detect manual changes that deviate from declared state
+- **Cost visibility** — review and estimate costs before applying changes
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you evaluate and select a technology stack for a new project?
+
+A structured evaluation framework:
+
+**1. Business constraints**
+- Time to market and team ramp-up cost
+- Licensing and total cost of ownership
+- Vendor lock-in risk
+
+**2. Technical fit**
+- Performance characteristics match workload (CPU-bound vs I/O-bound)
+- Scalability model aligns with expected growth
+- Ecosystem maturity (libraries, tooling, community)
+
+**3. Team capabilities**
+- Existing skills reduce ramp-up time (Conway\'s Law)
+- Avoid "resume-driven development" — new tech adds risk
+
+**4. Long-term considerations**
+- Active maintenance and community (GitHub stars, release cadence)
+- Corporate backing or foundation governance
+- Hiring market (can you find engineers?)
+
+**5. Proof of Concept**
+- Build a small spike covering the highest-risk technical assumptions
+- Measure, don\'t guess — benchmark against actual workload characteristics
+
+**Common pitfall:** Choosing technology because it\'s trending rather than because it solves the actual problem better than alternatives.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is Zero Downtime Deployment and what strategies enable it?
+
+**Zero Downtime Deployment** ensures users experience no service interruption during a new version release.
+
+**Strategies:**
+
+**1. Rolling Deployment**
+- Replace instances one at a time
+- Both old and new versions run simultaneously during the window
+- Requires backward-compatible changes during transition
+
+**2. Blue-Green Deployment**
+- Two identical environments: Blue (current) and Green (new)
+- Switch traffic at the load balancer level once Green is validated
+- Instant rollback by switching back to Blue
+
+**3. Canary Release**
+- Route a small percentage of traffic (e.g., 5%) to the new version
+- Monitor error rate, latency, and business metrics
+- Gradually increase traffic; rollback if metrics degrade
+
+**4. Feature Flags**
+- Deploy code to production but gate new behavior behind a flag
+- Decouple deployment from feature release
+- Tools: LaunchDarkly, AWS AppConfig, Unleash
+
+**Database migration challenge:**
+- Use **expand-contract pattern**: first add new columns (expand), migrate data, then remove old columns (contract) — across multiple deployments
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you design for failure? What is chaos engineering?
+
+**Design for Failure Principles:**
+- Assume any component will fail; design the system to degrade gracefully
+- Set explicit timeouts on all I/O operations
+- Use health checks and readiness probes (Kubernetes)
+- Implement bulkheads to isolate failure domains (thread pool isolation)
+- Plan for cascading failures with circuit breakers
+- Design idempotent operations to support safe retries
+
+**Chaos Engineering** (pioneered by Netflix\'s Chaos Monkey) is the practice of intentionally injecting failures into a system in production (or production-like environments) to proactively discover weaknesses.
+
+**Chaos Engineering process:**
+1. Define steady state (key business/technical metrics)
+2. Hypothesize: "If we kill this instance, steady state will be maintained"
+3. Inject failure (instance termination, network latency, disk full, CPU spike)
+4. Observe and compare against steady state
+5. Fix discovered weaknesses; repeat
+
+**Tools:** Netflix Chaos Monkey, Gremlin, LitmusChaos (Kubernetes), AWS Fault Injection Simulator
+
+**Key distinction:** Chaos Engineering is not random destruction — it is a controlled scientific experiment to build confidence in system resilience.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
