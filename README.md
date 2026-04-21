@@ -35,7 +35,7 @@
 | 18 | [What is the difference between a Product Owner and a Project Manager?](#q-what-is-the-difference-between-a-product-owner-and-a-project-manager) |
 | 19 | [What is Change Management in project management?](#q-what-is-change-management-in-project-management) |
 | 20 | [What are DORA metrics and why do they matter?](#q-what-are-dora-metrics-and-why-do-they-matter) |
-| 21| [Software Architect Interview Questions](#-24-software-architect-interview-questions)|
+| 21| [Software Architect Interview Questions](#-21-software-architect-interview-questions)|
 
 <br/>
 
